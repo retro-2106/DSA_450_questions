@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
 
@@ -10,11 +12,10 @@ public:
             // if(!visited[*it] && iscyclic_helper(adj,*it,visited,v))
             // return true;
             if (!visited[*it]) 
-        { 
-           if (iscyclic_helper(adj,*it, visited, v)) 
-              return true; 
-        } 
-            
+            { 
+                if (iscyclic_helper(adj,*it, visited, v)) 
+                    return true; 
+            } 
             else if(*it != parent)
             return true;
         }
@@ -25,13 +26,14 @@ public:
 	   // map<int,bool> visited;
 	   bool *visited = new bool[V]; 
     for (int i = 0; i < V; i++) 
-        visited[i] = false; 
-	    for(int i=0;i<V;i++)
-	    {
-	        if(!visited[i])
-	        if(iscyclic_helper(adj,i,visited,-1))
-	        return true;
-	    }
-	    return false;
+        visited[i] = false;
+     
+    for(int i=0;i<V;i++)
+    {
+        if(!visited[i])
+        if(iscyclic_helper(adj,i,visited,-1))
+        return true;
+    }
+    return false;
 	}
 };

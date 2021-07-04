@@ -21,7 +21,7 @@ void prims(int **edges, int n)
 {
     int *parent = new int[n];
     int *visited = new int[n];
-    int weights = new int[n];
+    int *weights = new int[n];
 
     for(int i=0;i<n;i++)
     {
@@ -34,7 +34,7 @@ void prims(int **edges, int n)
 
     for(int i=0;i<n;i++)
     {
-        int min_index = find_minimum_vertex(weights, visited, n);
+        int min_index = find_min_vertex(weights, visited, n);
 
         visited[min_index] = 1;
 

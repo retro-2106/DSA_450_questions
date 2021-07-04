@@ -31,7 +31,7 @@ void dijkstra(int **edges, int n)
 
     for(int i=0;i<n;i++)
     {
-        int min_vertex = find_min_vertex(weights, visited, n);
+        int min_vertex = find_min_vertex(distance, visited, n);
         
         visited[min_vertex] = 1;
         for(int j=0;j<n;j++)

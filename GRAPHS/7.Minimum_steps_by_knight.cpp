@@ -1,3 +1,6 @@
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
 	int minStepToReachTarget(vector<int>&KnightPos, vector<int>&TargetPos, int N)

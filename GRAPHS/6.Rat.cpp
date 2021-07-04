@@ -1,4 +1,6 @@
-
+#include <bits/stdc++.h>
+using namespace std;
+#define MAX 100
 bool isSafe(int row, int col, int m[][MAX], 
                  int n, bool visited[][MAX])
 {
